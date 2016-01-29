@@ -29,5 +29,5 @@ def func_two(length):
 if __name__=="__main__":
 	pass
 	func_one(1000)
-	print '##'
+	print '#'
 	func_two(1000)
