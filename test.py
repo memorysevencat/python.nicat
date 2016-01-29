@@ -23,7 +23,7 @@ def func_two(length):
 	for x in range(length):
 		for y in range(length):
 			if x*y > 50:
-				result.append((x,y))
+				result.append((x,y))
 	return result
 
 if __name__=="__main__":
