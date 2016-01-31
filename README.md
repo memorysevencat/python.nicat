@@ -1,2 +1,2 @@
 ### python.nicat
-my python practise
+my python2 practise
