@@ -16,6 +16,14 @@ def fib_iter():
 	while True:
 		yield b
 		a,b=b,a+b
+mem_cache={}
+def mem_fib(n):
+	if n not in mem_cache.keys():
+		if n<=2:
+			mem_cache[n]=1
+		else:
+			mem_cache[n]=fib(n-1)+fib(n-2)
+	return mem_cache[n]
 
 if __name__=='__main__':
 	start=time.clock()
@@ -32,3 +40,10 @@ if __name__=='__main__':
 		print True
 	else:
 		print False
+		
+	nlist=[random.randint(1,30) for i in range(100)]
+	fib_func_result=[]
+	fib_func=[mem_fib(i) for i in nlist]
+	for i in nlist:
+		fib_func_result.append(mem_cache[i])
+	print fib_func_result
