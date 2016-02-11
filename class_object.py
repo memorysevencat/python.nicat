@@ -5,8 +5,8 @@
 class PositiveNum(object):
 	def __init__(self,value):
 		self.val=value
-	def __get__(self,instance,owner):
-		print '__get__',instance,owner
+	def __get__(self,instance,value):
+		print '__get__',instance,value
 		return self.val
 	def __set__(self,instance,value):
 		print '__set__',instance,value
@@ -14,9 +14,9 @@ class PositiveNum(object):
 			assert int(value)>0
 			self.val=value
 		except AssertionError:
-			print 'Error '+str(value)
+			print 'Error '+str(value)+' is not positive number'
 		except:
-			print 'Error '+str(value)
+			print 'Error '+str(value)+' is not number'
 	def __delete__(self,instance):
 		print '__delete__',instance
 		self.val=None
@@ -33,9 +33,9 @@ class Car(object):
 		self.height=height
 
 if __name__=='__main__':
-	a=Car(10,12,'cat')
+	a=Car(10,12,15,'cat')
 
-	#print a.owner
+	print a.length
 	#del a.owner
 	#print a.owner
 	#print a.name
