@@ -25,7 +25,9 @@ class Date(object):
 	@staticmethod
 	def millenium(month,day):
 		return Date(month,day,2016)
-
+		
+	def method(self):
+		print 1
 class DateTime(Date):
 	def __str__(self):
 		return "{0}-{1}-{2}-00:00:00".format(self.year,self.month,self.day)
@@ -42,3 +44,7 @@ if __name__=='__main__':
 	print millenium1
 	millenium2=Date.millenium(3,4)
 	print millenium2
+	
+	Date().method()
+	#DateTime.method()
+	
