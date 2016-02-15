@@ -3,6 +3,9 @@
 #copyright by sevencat
 
 class Date(object):
+	#__new__
+	#def __new__(cls,*args, **kwargs):
+	#	return object.__new__(DateTime,*args,**kwargs)
 	def __init__(self,day=0,month=0,year=0):
 		self.day=day
 		self.month=month
