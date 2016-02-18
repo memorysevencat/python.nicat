@@ -39,3 +39,4 @@ if __name__=='__main__':
 	d.showAll()
 	d.giveRaise(0.5)
 	d.showAll()
+	print Employee("xiaofour")
