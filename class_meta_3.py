@@ -1,5 +1,5 @@
 #!/usr/bin/python2
-#coding by utf-8
+#coding:utf-8
 #copyright by sevencat
 def test_fun(arg):
 	x=1
