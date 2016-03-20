@@ -18,5 +18,5 @@ class B(A):
 print B.__bases__
 print isinstance(B,final)
 
-class C(B):
-	pass
+#class C(B):
+#	pass
